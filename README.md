@@ -15,11 +15,11 @@ A few **considerations** before diving in:
 * It's completely free, as in the required tools are free of charge and open-source.
 * I am in no way affiliated with any of the tools or services discussed below.
 
-# Goals
+## Goals
 
 Protecting your identity, reducing your digital footprint and keeping you and your data safe from malware and trackers while performing OSINT work.
 
-# Principles
+## Principles
 
 First and foremost, the OOO starts with **two fundamental principles** in mind:
 
@@ -35,7 +35,7 @@ With these principles in mind, I'm going to start with an advice for each of the
 
 Now, the list that follows is by no means exhaustive, but it does contain most of the necessary precautions when it comes to securing and keeping the **BASE** safe.
 
-# Task #1 
+## Task #1 
 
 On your BASE machine, start fresh by installing Ubuntu 24.x. If you prefer other Linux distros, go ahead and install your favorite one, however this framework assumes Ubuntu as the OS. For the installation you'll need to download the [latest Ubuntu Desktop .iso image](https://ubuntu.com/download/desktop), then make a bootable USB drive with [Balena Etcher](https://etcher.balena.io/).
 
@@ -46,13 +46,13 @@ During the installation (mode Interactive), pay close attention to the following
 * When creating your user during installation, first of all do **NOT** name it using your real name, secondly set a **strong password** which is **different** than the password you configured during the previous step. Each time you're going to power on your BASE machine, you're going to be prompted to enter this password after entering the password for decryption. Also useful when you walk away from your BASE for quickly locking the system.
 * For more details regarding the installation process refer to [Ubuntu's official installation guide](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview).
 
-# Task #2
+## Task #2
 
 After the installation is complete, make sure your system is up to date. In the **Terminal** run:
 
 `sudo apt update && sudo apt upgrade -y`
 
-# Task #3
+## Task #3
 
 Enable Ubuntu's default firewall, ufw, and set the basic policies for incoming and outgoing traffic.
 
@@ -66,7 +66,7 @@ Your firewall is now active. Check its status using:
 
 `sudo ufw status verbose`
 
-# Task #4
+## Task #4
 
 Installing and using a **VPN** for protecting your Internet traffic. This safeguards your traffic from your ISP and also masks you real public IP when online.
 
@@ -78,7 +78,7 @@ With the free Proton VPN option, you need to create an account before you downlo
 
 Once you install Proton VPN on your BASE machine and log in with your new account, make sure to go to **Settings** and, under **Features**, enable **Kill switch** and check the **Advanced** option. This will only allow Internet access over the VPN connection.
 
-# Task #5
+## Task #5
 
 Maintaining your passwords and highly sensitive data protected with a password manager.
 
@@ -92,7 +92,7 @@ I won't go into the details of configuring and using each of them because this c
 
 However, if you choose to stick with the Proton suite and use ProtonPass, keep in mind that it can be easily installed as a browser extension and used after logging in with your new Proton email and password. One thing to remember is once you installed the extension, make sure to go to its **Settings**, then in the **Security** tab check the **Extra password** option and set a password that will be required to use ProtonPass. This acts as an additional layer of protection for your sensitive data such as login information.
 
-# Task #6
+## Task #6
 
 Let's move on to the browser on your BASE machine. By default, Ubuntu comes with Firefox. Stick with it, no reason to install Chrome or anything else. Needless to say, you should keep your Firefox updated. 
 
@@ -132,13 +132,13 @@ Next, it's time to make our Firefox more secure. Go to **Settings**.
 
 Now your Firefox is much more secure and should keep you safe from most nasty things out there.
 
-# Task #7
+## Task #7
 
 After configuring your Firefox, you can add an extra guardian that will further protect your browsing experience, and that is the **uBlock Origin** add-on which is going to automatically block adsm popups, trackers by default.
 
 To install this add-on, in Firefox type this in the search bar: `about:addons`, then search for uBlock Origin and add it to your browser. By default, it will block a lot of nasty or annoying things, so unless you need to enable more advanced settings or filters/lists, you can just leave it as it is and move on.
 
-# Task #8
+## Task #8
 
 Make sure AppArmor is installed and active. Quoting Ubuntu's website:
 
@@ -154,7 +154,7 @@ or, for more details on profiles:
 
 AppArmor profiles can be in either Enforce or Complain mode, where Enforce means that the policy defined in the profile will be enforced automatically, whilst Complain means that the policy will not be enforced but policy violations will be reported. By default, AppArmor configures some profiles in Enforce mode, whilst other may already be placed in Complain mode, or even unconfined. If you need to create or customize profiles for specific needs, check out the [documentation](https://ubuntu.com/server/docs/apparmor), otherwise stick with the defaults for now.
 
-# Task #9
+## Task #9
 
 A best practice in Linux environments is restricting or disallowing root logins. However, always make sure that you already have a user with administrative privileges before blocking root access. For example, in the previous task if you managed to run the `sudo aa-status` successfully (with your current user's password), then your account has administrative privileges, meaning it's capable of using the `sudo` command to temporarily gain root privileges. Additionally, you can check to see if your username is included in the output of:
 
@@ -187,7 +187,7 @@ Now, if you try the following commands, you should get "**This account is curren
 
 `sudo -i`
 
-# Task #10
+## Task #10
 
 Another best practice that you should implement on your BASE machine is disabling unnecessary stuff.
 
@@ -247,7 +247,7 @@ That's it. Save the file and close it.
 
 **Note!** Disabling the mic this way will also disable sounds on your BASE machine. If you ever need to listen to audio/video, you can remove the line from the file and then add it back again when you're done.
 
-# Additional tasks
+## Additional tasks
 
 * Keep your Ubuntu up to date, regularly check for updates via **Settings -> System -> Software Updates**.
 * Do not ever login to any of your personal accounts (email, social media, websites) on your BASE machine.
@@ -259,7 +259,7 @@ That's it. Save the file and close it.
 * You don't really need an antivirus. Linux viruses are quite rare and for this reason it's not worth having a 3rd party app sniffing everything you do.
 * As an additional precaution, cover your camera with black tape. Best webcam protection ever.
 
-# What about the VMs?
+## What about the VMs?
 
 Ok, so we covered the BASE machine which should be kept clean and secure at all times. 
 
@@ -277,16 +277,16 @@ So, before starting any OSINT-related work:
 * Keep in mind that the VM (OS, email, storage) must not interfere with BASE.
 * Once your OSINT work is done, save your data if needed and destroy the VM.
 
-# Final considerations
+## Final considerations
 
 * I didn't mention Tor. In short, Tor might be blocked by various online services, and unless you need it for a specific task (e.g. browsing the dark web) I would prefer the hardened setup discussed above.
 * I didn't mention Tails, which is an amnesic OS that you can run from a bootable USB drive with or without persistent storage. It may be a great choice for OSINT, but it comes with some limitations.
 * I didn't mention Qubes OS or Whonix, which are highly-secured OSs aimed at more advanced users. Instead, I wanted to build a framework that almost anyone with some tech skills can implement.
 
-# The future of the OOO Framework
+## The future of the OOO Framework
 
 As they say, this is a living document. As various services and tools evolve, the framework will change accordingly. Also, if I decide to add or remove tasks or recommendations I will do so at my own discretion.
 
-# Disclaimer
+## Disclaimer
 
 All the information in this framework is intended to protect yourself, your devices, your data and your OSINT work from the ever-changing landscape of online threats. In the context of this framework, OSINT refers to passive, non-intrusive open-source intelligence tasks. Any illegal or unethical use of this information is your responsibility. Be smart!
