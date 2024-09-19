@@ -1,4 +1,4 @@
-![ooo](img/ooo/png)
+![ooo](img/ooo.png)
 # OSINT OpSec Outline (OOO)
 **Framework for OSINT hygiene**
 
