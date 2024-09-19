@@ -5,33 +5,33 @@
 [![Stable Release](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/0SINTr/ooo/releases/tag/v1.0.0)
 [![Last Commit](https://img.shields.io/github/last-commit/0SINTr/ooo)](https://github.com/0SINTr/ooo/commits/main)
 
-Framework for maintaining proper digital hygiene whilst performing OSINT-related tasks and investigations.\
+Framework for maintaining proper **digital hygiene** whilst performing OSINT-related tasks and investigations.\
 This approach is a highly curated checklist of actions that should enhance your own personal and digital security prior to starting any OSINT investigation online.
 
 A few **considerations** before diving in:
 
 * The framework is not an end all be all, and can definitely be improved.
-* It's relatively easy to implement in less than an hour even if you're not a tech god.
+* It's relatively easy to implement in about an hour or so even if you're not a tech god.
 * It's completely free, as in the required tools are free of charge and open-source.
 * I am in no way affiliated with any of the tools or services discussed below.
 
 ## Goals
 
-Protecting your identity, reducing your digital footprint and keeping you and your data safe from malware and trackers while performing OSINT work.
+Protecting your **identity**, reducing your **digital footprint** and **keeping you and your data safe** from malware and trackers while performing OSINT work.
 
 ## Principles
 
-First and foremost, the OOO starts with **two fundamental principles** in mind:
+First and foremost, the OOO logic is based on **two fundamental principles**:
 
-1. You always keep your real digital identity completely separate from your OSINT-er identity.
-2. You always keep every OSINT investigation separate from other investigations, and also from your OSINT-er identity.
+1. You should always **keep your real digital identity completely separate from your OSINT-er identity**.
+2. You should always **keep every OSINT investigation separate from other investigations**, and also from your OSINT-er identity.
 
 **No ifs, buts and maybes.** 
 
-With these principles in mind, I'm going to start with an advice for each of them:
+With these principles in mind, I'm going to start with some advice for each of them:
 
-1. **For following the 1st principle**, you should have a separate machine (e.g. laptop) dedicated only for your OSINT-er identity - let's call it the **BASE**. Ideally, it should be a brand new one. Keep in mind that you won't need the latest and greatest hardware on this machine, just a decent+ configuration to run Linux and a VM on top of it. The second option is to re-purpose a machine you already own (maybe an older laptop) specifically for OSINT tasks, however make sure to make a backup and then format it before moving on with this framework.
-2. **For following the 2nd principle**, you're going to need virtualization software (e.g. VirtualBox) installed on your dedicated machine, in which you're going to run VMs. You need a separate VM for **every** OSINT investigation to further keep your specific OSINT tasks, accounts and personas separate from your base OSINT-er setup. Again, different OSINT investigations means different VMs, keeping each investigation contained in its own sandbox, preventing any kind of leaks or malware to other VMs or to the **BASE** (host) machine.
+1. **For following the 1st principle**, you should have a **separate machine** (e.g. laptop) dedicated only for your OSINT-er identity - let's call it the **BASE**. Ideally, it should be a brand new one. Keep in mind that you won't need the latest and greatest hardware on this machine, just a decent+ configuration to run Linux and a VM on top of it. The second option is to re-purpose a machine you already own (maybe an older laptop) specifically for OSINT tasks, however make sure to make a backup and then fully format it before moving on with this framework.
+2. **For following the 2nd principle**, you're going to need **virtualization software** (e.g. VirtualBox) installed on your dedicated machine, in which you're going to run VMs. You need a separate VM for **every** OSINT investigation to further keep your specific OSINT tasks, accounts and personas separate from your base OSINT-er setup. Again, different OSINT investigations means different VMs, keeping each investigation contained in its own sandbox, preventing any kind of malware or data leaks to other VMs or to the **BASE** (host) machine.
 
 Now, the list that follows is by no means exhaustive, but it does contain most of the necessary precautions when it comes to securing and keeping the **BASE** safe.
 
@@ -48,13 +48,13 @@ During the installation (mode Interactive), pay close attention to the following
 
 ## Task #2
 
-After the installation is complete, make sure your system is up to date. In the **Terminal** run:
+After the installation is complete, make sure your **system is up to date**. In the **Terminal** run:
 
 `sudo apt update && sudo apt upgrade -y`
 
 ## Task #3
 
-Enable Ubuntu's default firewall, ufw, and set the basic policies for incoming and outgoing traffic.
+Enable Ubuntu's default firewall, **ufw**, and set the basic policies for incoming and outgoing traffic.
 
 `sudo ufw default deny incoming`
 
@@ -62,27 +62,27 @@ Enable Ubuntu's default firewall, ufw, and set the basic policies for incoming a
 
 `sudo ufw enable`
 
-Your firewall is now active. Check its status using:
+Your firewall is now active. Check its **status** using:
 
 `sudo ufw status verbose`
 
 ## Task #4
 
-Installing and using a **VPN** for protecting your Internet traffic. This safeguards your traffic from your ISP and also masks you real public IP when online.
+Installing and using a **VPN** for protecting your Internet traffic. This **safeguards your traffic from your ISP** and also **masks your real public IP** when online.
 
-My go-to option is [Proton VPN](https://protonvpn.com/), which is free, open-source, has a strict no-logs policy and it's based in Switzerland under heavy privacy laws. You can also choose to go with the paid version for additional features, however the free version will do. You won't probably ever need cutting-edge Internet speeds on your BASE machine or the VMs on top, so the main goal is the privacy that the VPN provides, not the speed.
+My go-to option is [Proton VPN](https://protonvpn.com/), which is free, open-source, has a strict no-logs policy and it's based in Switzerland under heavy privacy laws. You can also choose to go with the paid version for additional features, however the free version will do. You won't probably ever need cutting-edge Internet speeds on your BASE machine or the VMs on top, so **the main goal is the privacy that the VPN provides**, not the speed.
 
-If you prefer other options for your VPN service, that's ok. Just make sure you always use one.
+If you prefer other options for your VPN service, that's ok. **Just make sure you always use one**.
 
-With the free Proton VPN option, you need to create an account before you download it. Do **NOT** use your own Proton account/email, if you already have one for personal use. Create a new account and email address that has no reference to your real name, it's free and it takes 10 seconds to do so. You're going to need this email address and password for using your VPN.
+With the free Proton VPN option, you need to create an account before you download it. Do **NOT** use your own Proton account/email, if you already have one for personal use. Create a **new account and email address that has no reference to your real name**, it's free and it takes 10 seconds to do so. You're going to need this email address and password for using your VPN.
 
 Once you install Proton VPN on your BASE machine and log in with your new account, make sure to go to **Settings** and, under **Features**, enable **Kill switch** and check the **Advanced** option. This will only allow Internet access over the VPN connection.
 
 ## Task #5
 
-Maintaining your passwords and highly sensitive data protected with a password manager.
+Maintaining your passwords and highly sensitive data protected with a **password manager**.
 
-Here are a few good options which are free and open-source:
+Here are a few good options which are **free** and **open-source**:
 
 * [Bitwarden](https://bitwarden.com/download/)
 * [KeePassXC](https://keepassxc.org/download/#linux)
@@ -90,11 +90,11 @@ Here are a few good options which are free and open-source:
 
 I won't go into the details of configuring and using each of them because this can be easily found on their websites. 
 
-However, if you choose to stick with the Proton suite and use ProtonPass, keep in mind that it can be easily installed as a browser extension and used after logging in with your new Proton email and password. One thing to remember is once you installed the extension, make sure to go to its **Settings**, then in the **Security** tab check the **Extra password** option and set a password that will be required to use ProtonPass. This acts as an additional layer of protection for your sensitive data such as login information.
+However, if you choose to stick with the Proton suite and use ProtonPass, keep in mind that it can be easily installed as a **browser extension** and used after logging in with your new Proton email and password. One thing to remember is once you installed the extension, make sure to go to its **Settings**, then in the **Security** tab check the **Extra password** option and set a password that will be required to use ProtonPass. This acts as an additional layer of protection for your sensitive data such as login information.
 
 ## Task #6
 
-Let's move on to the browser on your BASE machine. By default, Ubuntu comes with Firefox. Stick with it, no reason to install Chrome or anything else. Needless to say, you should keep your Firefox updated. 
+Let's move on to the **browser** on your BASE machine. By default, Ubuntu comes with **Firefox**. Stick with it, no reason to install Chrome or anything else. Needless to say, you should **keep your Firefox updated**. 
 
 Next, it's time to make our Firefox more secure. Go to **Settings**.
 
@@ -134,17 +134,17 @@ Now your Firefox is much more secure and should keep you safe from most nasty th
 
 ## Task #7
 
-After configuring your Firefox, you can add an extra guardian that will further protect your browsing experience, and that is the **uBlock Origin** add-on which is going to automatically block adsm popups, trackers by default.
+After configuring your Firefox, you can add an extra guardian that will further protect your browsing experience, and that is the **uBlock Origin** add-on which is going to automatically block ads, pop-ups and trackers by default.
 
-To install this add-on, in Firefox type this in the search bar: `about:addons`, then search for uBlock Origin and add it to your browser. By default, it will block a lot of nasty or annoying things, so unless you need to enable more advanced settings or filters/lists, you can just leave it as it is and move on.
+To install this add-on, in Firefox type this in the search bar: `about:addons`, then search for **uBlock Origin** and add it to your browser. By default, it will block a lot of nasty or annoying things, so unless you need to enable more advanced settings or filters/lists, you can just leave it as it is and move on.
 
 ## Task #8
 
-Make sure AppArmor is installed and active. Quoting Ubuntu's website:
+Make sure **AppArmor** is installed and active. Quoting Ubuntu's website:
 
 >[AppArmor](https://apparmor.net/) is an easy-to-use Linux Security Module implementation that restricts applications’ capabilities and permissions with **profiles** that are set per-program. It provides mandatory access control (MAC) to supplement the more traditional UNIX model of discretionary access control (DAC).
 
-In Ubuntu 24.x AppArmor is installed and active by default, you can check its status using:
+In Ubuntu 24.x AppArmor is installed and active by default, you can check its **status** using:
 
 `aa-status`
 
@@ -152,11 +152,11 @@ or, for more details on profiles:
 
 `sudo aa-status`
 
-AppArmor profiles can be in either Enforce or Complain mode, where Enforce means that the policy defined in the profile will be enforced automatically, whilst Complain means that the policy will not be enforced but policy violations will be reported. By default, AppArmor configures some profiles in Enforce mode, whilst other may already be placed in Complain mode, or even unconfined. If you need to create or customize profiles for specific needs, check out the [documentation](https://ubuntu.com/server/docs/apparmor), otherwise stick with the defaults for now.
+AppArmor profiles can be in either **Enforce** or **Complain** mode, where **Enforce** means that the policy defined in the profile will be enforced automatically, whilst **Complain** means that the policy will not be enforced but policy violations will be reported. By default, AppArmor configures some profiles in Enforce mode, whilst other may already be placed in Complain mode, or even unconfined. If you need to create or customize profiles for specific needs, check out the [documentation](https://ubuntu.com/server/docs/apparmor), otherwise stick with the defaults for now.
 
 ## Task #9
 
-A best practice in Linux environments is restricting or disallowing root logins. However, always make sure that you already have a user with administrative privileges before blocking root access. For example, in the previous task if you managed to run the `sudo aa-status` successfully (with your current user's password), then your account has administrative privileges, meaning it's capable of using the `sudo` command to temporarily gain root privileges. Additionally, you can check to see if your username is included in the output of:
+A best practice in Linux environments is **restricting or disallowing root logins**. However, always **make sure that you already have a user with administrative privileges** before blocking root access. For example, in the previous task if you managed to run the `sudo aa-status` successfully (with your current user's password), then your account has administrative privileges, meaning it's capable of using the `sudo` command to temporarily gain root privileges. Additionally, you can check to see if your username is included in the output of:
 
 `getent group sudo`
 
@@ -166,7 +166,7 @@ If everything looks good, then to restrict root logins you should edit the `/etc
 
 Here's a [guide to using vim](https://www.linuxfoundation.org/blog/blog/classic-sysadmin-vim-101-a-beginners-guide-to-vim) if you're new to it.
 
-Now, edit the passwd file using the command below. 
+Now, edit the **passwd** file using the command below. 
 
 `sudo vim /etc/paswd`
 
@@ -189,17 +189,17 @@ Now, if you try the following commands, you should get "**This account is curren
 
 ## Task #10
 
-Another best practice that you should implement on your BASE machine is disabling unnecessary stuff.
+Another best practice that you should implement on your BASE machine is **disabling unnecessary stuff**.
 
-This is going to clean up and simplify your working environment, and will also reduce your attack surface.
+This is going to clean up and simplify your working environment, and will also **reduce your attack surface**.
 
 * **Removing unnecessary apps**
 
-Since I assume you performed Task #1 already, you have chosen Default Selection during your fresh installation of Ubuntu. This already provided you with a clean and minimalistic OS. If you need to double-check for any useless apps, simply go to **Settings -> Apps** from your main menu and scroll through the list of installed apps. You probably don't need to remove anything if you followed the steps in Task #1.
+Since I assume you performed Task #1 already, you have chosen **Default Selection** during your fresh installation of Ubuntu. This already provided you with a clean and minimalistic OS. If you need to double-check for any useless apps, simply go to **Settings -> Apps** from your main menu and scroll through the list of installed apps. You probably don't need to remove anything if you followed the steps in Task #1.
 
 * **Monitoring running services**
 
-You can regularly monitor the services actively running on your system using the following commands:
+You can regularly **monitor the services actively running on your system** using the following commands:
 
 `service --status-all`
 
@@ -213,7 +213,7 @@ Go to **Settings -> Bluetooth** and disable it.
 
 * **Disabling reporting**
 
-To enable all kinds of data collection that Ubuntu may perform, use the following commands:
+To disable all kinds of **data collection** that Ubuntu may perform, use the following commands:
 
 `ubuntu-report -f send no`
 
@@ -223,9 +223,9 @@ Additionally, in your Ubuntu main menu go to **Settings -> Privacy & Security ->
 
 * **Disabling the camera and microphone**
 
-Remember that your BASE machine is completely separate from your personal machines and life. Therefore, as an OSINT-er you won't ever need to show your face on camera or make voice calls. For this reason and your own protection, you should disable these services.
+Remember that **your BASE machine is completely separate from your personal machines and life**. Therefore, as an OSINT-er you won't ever need to show your face on camera or make voice calls. For this reason and your own protection, you should disable these services.
 
-For disabling the camera, you need to edit the following file using your preferred editor:
+For disabling the **camera**, you need to edit the following file using your preferred editor:
 
 `sudo vim /etc/modprobe.d/blacklist.conf`
 
@@ -233,13 +233,13 @@ Then, at the end of the file insert the following line:
 
 `blacklist uvcvideo`
 
-Next, open up a separate Terminal window to search for your audio module and type in:
+Next, open up a separate Terminal window to search for your **audio module** and type in:
 
     cat /proc/asound/modules
 
 The result is going to be similar to: `0 snd_hda_dsp`
 
-Now, in the same `/etc/modprobe.d/blacklist.conf` file where you blacklisted your camera, add another line at the end, and make sure to replace the audio module name with your own:
+Now, in the same `/etc/modprobe.d/blacklist.conf` file where you blacklisted your camera, add another line at the end, and **make sure to replace the audio module name with your own**:
 
 `blacklist snd_hda_dsp`
 
@@ -250,38 +250,38 @@ That's it. Save the file and close it.
 ## Additional tasks
 
 * Keep your Ubuntu up to date, regularly check for updates via **Settings -> System -> Software Updates**.
-* Do not ever login to any of your personal accounts (email, social media, websites) on your BASE machine.
-* Do not download anything from the Internet. You don't need to install 3rd party apps or download files on the BASE. Any OSINT-related apps or downloads are done only inside a dedicated VM.
-* Do not visit any shady websites on your BASE machine's browser, even if you've performed all tasks above. No torrents, no dark web, no porn.
-* Do not plug in any USB or storage devices, especially if you've plugged them already into other machines. You risk bringing malware or other unwanted stuff into your BASE machine.
+* **Do not ever login to any of your personal accounts** (email, social media, websites) on your BASE machine.
+* **Do not download anything from the Internet**. You don't need to install 3rd party apps or download files on the BASE. Any OSINT-related apps or downloads are done only inside a dedicated VM.
+* **Do not visit any shady websites** on your BASE machine's browser, even if you've performed all tasks above. No torrents, no dark web, no porn.
+* **Do not plug in any USB or storage devices**, especially if you've plugged them already into other machines. You risk bringing malware or other unwanted stuff into your BASE machine.
 * If you need secure storage to store files, use [ProtonDrive](https://proton.me/drive/download) (free version) which provides you with 5GB of encrypted storage.
 * If you need email, go with [ProtonMail](https://proton.me/mail/download) (free) for one email address and 1GB storage space.
-* You don't really need an antivirus. Linux viruses are quite rare and for this reason it's not worth having a 3rd party app sniffing everything you do.
-* As an additional precaution, cover your camera with black tape. Best webcam protection ever.
+* **You don't really need an antivirus**. Linux viruses are quite rare and for this reason it's not worth having a 3rd party app sniffing everything you do.
+* As an additional precaution, **cover your camera with black tape**. Best webcam protection ever.
 
 ## What about the VMs?
 
 Ok, so we covered the BASE machine which should be kept clean and secure at all times. 
 
-On the other hand, your OSINT work is going to be performed on dedicated VMs exclusively. Since the VMs are running on top of your BASE machine, they will obviously "borrow" some of the security benefits of the tasks above, such as VPN traffic encryption, ufw protection, disabled camera and mic and so on.
+On the other hand, **your OSINT work is going to be performed on dedicated VMs exclusively**. Since the VMs are running on top of your BASE machine, they will obviously "borrow" some of the security benefits of the tasks above, such as VPN traffic encryption, ufw protection, disabled camera and mic and so on.
 
 However, on each VM you should implement some of the steps performed on the BASE machine in order to keep the VM clean and secure during your investigation. Your VM might be Ubuntu, Kali or another Linux distro of your choice. Just don't use Windows, ok?
 
-So, before starting any OSINT-related work:
+So, **before starting any OSINT-related work**:
 
-* Make sure the VM's OS is updated.
-* Install KeePassXC for securley managing any data or logins locally on the VM.
-* Repeat tasks #6 and #7 for ensuring a safe browsing experience on the VM.
-* Create and use a separate email address to use for that specific OSINT task.
+* Make sure the **VM's OS is updated**.
+* Install **KeePassXC** for securley managing any data or logins locally on the VM.
+* Repeat **tasks #6 and #7** for ensuring a safe browsing experience on the VM.
+* Create and **use a separate email address** for that specific OSINT task only.
 * Use the VM's storage space or a new ProtonDrive for your work on the VM.
 * Keep in mind that the VM (OS, email, storage) must not interfere with BASE.
-* Once your OSINT work is done, save your data if needed and destroy the VM.
+* Once your OSINT work is done, save your data if needed and **destroy the VM**.
 
 ## Final considerations
 
-* I didn't mention Tor. In short, Tor might be blocked by various online services, and unless you need it for a specific task (e.g. browsing the dark web) I would prefer the hardened setup discussed above.
-* I didn't mention Tails, which is an amnesic OS that you can run from a bootable USB drive with or without persistent storage. It may be a great choice for OSINT, but it comes with some limitations.
-* I didn't mention Qubes OS or Whonix, which are highly-secured OSs aimed at more advanced users. Instead, I wanted to build a framework that almost anyone with some tech skills can implement.
+* I didn't mention **Tor**. In short, Tor might be blocked by various online services, and unless you need it for a specific task (e.g. browsing the dark web) I would prefer the hardened setup discussed above.
+* I didn't mention **Tails**, which is an amnesic OS that you can run from a bootable USB drive with or without persistent storage. It may be a great choice for OSINT, but it comes with some limitations.
+* I didn't mention **Qubes** or **Whonix**, which are highly-secured OSs aimed at more advanced users. Instead, I wanted to build a framework that almost anyone with some tech skills can implement.
 
 ## The future of the OOO Framework
 
@@ -289,4 +289,4 @@ As they say, this is a living document. As various services and tools evolve, th
 
 ## Disclaimer
 
-All the information in this framework is intended to protect yourself, your devices, your data and your OSINT work from the ever-changing landscape of online threats. In the context of this framework, OSINT refers to passive, non-intrusive open-source intelligence tasks. Any illegal or unethical use of this information is your responsibility. Be smart!
+All the information in this framework is intended to **protect yourself, your devices, your data and your OSINT work** from the ever-changing landscape of online threats. In the context of this framework, **OSINT refers to passive, non-intrusive open-source intelligence** tasks. Any illegal or unethical use of this information is **your** responsibility.
