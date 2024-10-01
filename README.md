@@ -37,13 +37,13 @@ Now, the list that follows is by no means exhaustive, but it does contain most o
 
 ## 🛠️ Task #1 
 
-On your BASE machine, start fresh by installing Ubuntu 24.x. If you prefer other Linux distros, go ahead and install your favorite one, however this framework assumes Ubuntu as the OS. For the installation you'll need to download the [latest Ubuntu Desktop .iso image](https://ubuntu.com/download/desktop), then make a bootable USB drive with [Balena Etcher](https://etcher.balena.io/).
+On your **BASE** machine, start fresh by installing Ubuntu 24.x. If you prefer other Linux distros, go ahead and install your favorite one, however this framework assumes Ubuntu as the OS. For the installation you'll need to download the [latest Ubuntu Desktop .iso image](https://ubuntu.com/download/desktop), then make a bootable USB drive with [Balena Etcher](https://etcher.balena.io/).
 
 During the installation (mode Interactive), pay close attention to the following settings:
 
 * Choose **Default Selection** (not Extended) when asked about what apps and features to install.
-* For disk management, choose **LVM & encryption** to fully encrypt your disk. This will protect your data in case of unauthorized physical access to the BASE machine. Set a **strong password** during this step. Each time you're going to power on your BASE machine, you're going to be prompted to enter this password for decryption.
-* When creating your user during installation, first of all do **NOT** name it using your real name, secondly set a **strong password** which is **different** than the password you configured during the previous step. Each time you're going to power on your BASE machine, you're going to be prompted to enter this password after entering the password for decryption. Also useful when you walk away from your BASE for quickly locking the system.
+* For disk management, choose **LVM & encryption** to fully encrypt your disk. This will protect your data in case of unauthorized physical access to the **BASE** machine. Set a **strong password** during this step. Each time you're going to power on your **BASE** machine, you're going to be prompted to enter this password for decryption.
+* When creating your user during installation, first of all do **NOT** name it using your real name, secondly set a **strong password** which is **different** than the password you configured during the previous step. Each time you're going to power on your **BASE** machine, you're going to be prompted to enter this password after entering the password for decryption. Also useful when you walk away from your **BASE** for quickly locking the system.
 * For more details regarding the installation process refer to [Ubuntu's official installation guide](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview).
 
 ## 🛠️ Task #2
@@ -70,13 +70,13 @@ Your firewall is now active. Check its **status** using:
 
 Installing and using a **VPN** for protecting your Internet traffic. This **safeguards your traffic from your ISP** and also **masks your real public IP** when online.
 
-My go-to option is [Proton VPN](https://protonvpn.com/), which is free, open-source, has a strict no-logs policy and it's based in Switzerland under heavy privacy laws. You can also choose to go with the paid version for additional features, however the free version will do. You won't probably ever need cutting-edge Internet speeds on your BASE machine or the VMs on top, so **the main goal is the privacy that the VPN provides**, not the speed.
+My go-to option is [Proton VPN](https://protonvpn.com/), which is free, open-source, has a strict no-logs policy and it's based in Switzerland under heavy privacy laws. You can also choose to go with the paid version for additional features, however the free version will do. You won't probably ever need cutting-edge Internet speeds on your **BASE** machine or the VMs on top, so **the main goal is the privacy that the VPN provides**, not the speed.
 
 If you prefer other options for your VPN service, that's ok. **Just make sure you always use one**.
 
 With the free Proton VPN option, you need to create an account before you download it. Do **NOT** use your own Proton account/email, if you already have one for personal use. Create a **new account and email address that has no reference to your real name**, it's free and it takes 10 seconds to do so. You're going to need this email address and password for using your VPN.
 
-Once you install Proton VPN on your BASE machine and log in with your new account, make sure to go to **Settings** and, under **Features**, enable **Kill switch** and check the **Advanced** option. This will only allow Internet access over the VPN connection.
+Once you install Proton VPN on your **BASE** machine and log in with your new account, make sure to go to **Settings** and, under **Features**, enable **Kill switch** and check the **Advanced** option. This will only allow Internet access over the VPN connection.
 
 ## 🛠️ Task #5
 
@@ -94,7 +94,7 @@ However, if you choose to stick with the Proton suite and use ProtonPass, keep i
 
 ## 🛠️ Task #6
 
-Let's move on to the **browser** on your BASE machine. By default, Ubuntu comes with **Firefox**. Stick with it, no reason to install Chrome or anything else. Needless to say, you should **keep your Firefox updated**. 
+Let's move on to the **browser** on your **BASE** machine. By default, Ubuntu comes with **Firefox**. Stick with it, no reason to install Chrome or anything else. Needless to say, you should **keep your Firefox updated**. 
 
 Next, it's time to make our Firefox more secure. Go to **Settings**.
 
@@ -189,7 +189,7 @@ Now, if you try the following commands, you should get "**This account is curren
 
 ## 🛠️ Task #10
 
-Another best practice that you should implement on your BASE machine is **disabling unnecessary stuff**.
+Another best practice that you should implement on your **BASE** machine is **disabling unnecessary stuff**.
 
 This is going to clean up and simplify your working environment, and will also **reduce your attack surface**.
 
@@ -245,15 +245,15 @@ Now, in the same `/etc/modprobe.d/blacklist.conf` file where you blacklisted you
 
 That's it. Save the file and close it.
 
-**Note!** Disabling the mic this way will also disable sounds on your BASE machine. If you ever need to listen to audio/video, you can remove the line from the file and then add it back again when you're done.
+**Note!** Disabling the mic this way will also disable sounds on your **BASE** machine. If you ever need to listen to audio/video, you can remove the line from the file and then add it back again when you're done.
 
 ## 🛠️ Additional tasks
 
 * Keep your Ubuntu up to date, regularly check for updates via **Settings -> System -> Software Updates**.
-* **Do not ever login to any of your personal accounts** (email, social media, websites) on your BASE machine.
-* **Do not download anything from the Internet**. You don't need to install 3rd party apps or download files on the BASE. Any OSINT-related apps or downloads are done only inside a dedicated VM.
-* **Do not visit any shady websites** on your BASE machine's browser, even if you've performed all tasks above. No torrents, no dark web, no porn.
-* **Do not plug in any USB or storage devices**, especially if you've plugged them already into other machines. You risk bringing malware or other unwanted stuff into your BASE machine.
+* **Do not ever login to any of your personal accounts** (email, social media, websites) on your **BASE** machine.
+* **Do not download anything from the Internet**. You don't need to install 3rd party apps or download files on the **BASE**. Any OSINT-related apps or downloads are done only inside a dedicated VM.
+* **Do not visit any shady websites** on your **BASE** machine's browser, even if you've performed all tasks above. No torrents, no dark web, no porn.
+* **Do not plug in any USB or storage devices**, especially if you've plugged them already into other machines. You risk bringing malware or other unwanted stuff into your **BASE** machine.
 * If you need secure storage to store files, use [ProtonDrive](https://proton.me/drive/download) (free version) which provides you with 5GB of encrypted storage.
 * If you need email, go with [ProtonMail](https://proton.me/mail/download) (free) for one email address and 1GB storage space.
 * **You don't really need an antivirus**. Linux viruses are quite rare and for this reason it's not worth having a 3rd party app sniffing everything you do.
@@ -261,11 +261,11 @@ That's it. Save the file and close it.
 
 ## 🔍 What about the VMs?
 
-Ok, so we covered the BASE machine which should be kept clean and secure at all times. 
+Ok, so we covered the **BASE** machine which should be kept clean and secure at all times. 
 
-On the other hand, **your OSINT work is going to be performed on dedicated VMs exclusively**. Since the VMs are running on top of your BASE machine, they will obviously "borrow" some of the security benefits of the tasks above, such as VPN traffic encryption, ufw protection, disabled camera and mic and so on.
+On the other hand, **your OSINT work is going to be performed on dedicated VMs exclusively**. Since the VMs are running on top of your **BASE** machine, they will obviously "borrow" some of the security benefits of the tasks above, such as VPN traffic encryption, ufw protection, disabled camera and mic and so on.
 
-However, on each VM you should implement some of the steps performed on the BASE machine in order to keep the VM clean and secure during your investigation. Your VM might be Ubuntu, Kali or another Linux distro of your choice. Just don't use Windows, ok?
+However, on each VM you should implement some of the steps performed on the **BASE** machine in order to keep the VM clean and secure during your investigation. Your VM might be Ubuntu, Kali or another Linux distro of your choice. Just don't use Windows, ok?
 
 So, **before starting any OSINT-related work**:
 
@@ -274,7 +274,7 @@ So, **before starting any OSINT-related work**:
 * Repeat **tasks #6 and #7** for ensuring a safe browsing experience on the VM.
 * Create and **use a separate email address** for that specific OSINT task only.
 * Use the VM's storage space or a new ProtonDrive for your work on the VM.
-* Keep in mind that the VM (OS, email, storage) must not interfere with BASE.
+* Keep in mind that the VM (OS, email, storage) must not interfere with **BASE**.
 * Once your OSINT work is done, save your data if needed and **destroy the VM**.
 
 ## ⚠️ Final considerations
