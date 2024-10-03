@@ -2,7 +2,7 @@
 # OSINT OpSec Outline
 **OOO - Framework for OSINT hygiene**
 
-[![Stable Release](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/0SINTr/ooo/releases/tag/v1.0.0)
+[![Stable Release](https://img.shields.io/badge/version-1.1.0-blue.svg)](https://github.com/0SINTr/ooo/releases/tag/v1.1.0)
 [![Last Commit](https://img.shields.io/github/last-commit/0SINTr/ooo)](https://github.com/0SINTr/ooo/commits/main)
 
 Framework for maintaining proper **digital hygiene** whilst performing OSINT-related tasks and investigations.\
@@ -74,9 +74,11 @@ My go-to option is [Proton VPN](https://protonvpn.com/), which is free, open-sou
 
 If you prefer other options for your VPN service, that's ok. **Just make sure you always use one**.
 
-With the free Proton VPN option, you need to create an account before you download it. Do **NOT** use your own Proton account/email, if you already have one for personal use. Create a **new account and email address that has no reference to your real name**, it's free and it takes 10 seconds to do so. You're going to need this email address and password for using your VPN.
+* With the free Proton VPN option, you need to create an account before you download it. Do **NOT** use your own Proton account/email, if you already have one for personal use. Create a **new account and email address that has no reference to your real name**, it's free and it takes 10 seconds to do so. You're going to need this email address and password for using your VPN.
 
-Once you install Proton VPN on your **BASE** machine and log in with your new account, make sure to go to **Settings** and, under **Features**, enable **Kill switch** and check the **Advanced** option. This will only allow Internet access over the VPN connection.
+* Once you install Proton VPN on your **BASE** machine and log in with your new account, make sure to go to **Settings** and, under **Features**, enable **Kill switch** and check the **Advanced** option. This will **only** allow Internet access over the VPN connection. Also, down below in the **Settings** check the **General** section and, optionally, set a preferred server in the **Auto connect** field. This will make sure that Proton VPN will always connect to that specific server.
+
+* To **make sure your VPN is enabled at startup**, in your Ubuntu search for **Startup Applications**. A new windows opens up, click on **Add**, provide a **Name:** (e.g. ProtonVPN), then click **Browse...** and locate the Proton VPN app - this should be located at **/usr/bin/protonvpn-app**. Once this path appears in the **Command:** field, hit **Save**. Next time you restart Ubuntu your VPN will start automatically. For other VPNs the app location might differ.
 
 ## 🛠️ Task #5
 
@@ -96,39 +98,41 @@ However, if you choose to stick with the Proton suite and use ProtonPass, keep i
 
 Let's move on to the **browser** on your **BASE** machine. By default, Ubuntu comes with **Firefox**. Stick with it, no reason to install Chrome or anything else. Needless to say, you should **keep your Firefox updated**. 
 
-Next, it's time to make our Firefox more secure. Go to **Settings**.
+Next, it's time to make our **Firefox** more secure. Go to **Settings**.
 
 **General**:
 
-* Under **Startup**, uncheck: Open previous windows and tabs
-* Under **Downloads**, check: Always ask you where to save files
-* Under **Browsing**, uncheck everything
+* Make **Firefox** your **default browser**
+* Under **Startup**, uncheck: **Open previous windows and tabs**
+* Under **Downloads**, check: **Always ask you where to save files**
+* Under **Language** uncheck: **Check spelling as you type**
+* Under **Browsing**, uncheck **everything**
 
 **Home**:
 
-* Under **New Windows and Tabs**, set Blank Page for both options
-* Under **Firefox Home Content**, uncheck everything
+* Under **New Windows and Tabs**, set **Blank Page for both options**
+* Under **Firefox Home Content**, uncheck **everything**
 
 **Search**:
 
-* Under **Default Search Engine**, choose DuckDuckGo
-* Under **Search Suggestions** and **Address Bar**, uncheck everything
+* Under **Default Search Engine**, choose **DuckDuckGo**
+* Under **Search Suggestions** and **Address Bar**, uncheck **everything**
 
 **Privacy & Security**:
 
-* Under **Enhanced Tracking Protection**, choose Strict
-* Under **Website Privacy Preferences**, check both options
-* Under **Cookies and Site Data**, check: Delete cookies and site data when Firefox is closed
-* Under **Passwords**, uncheck everything
-* Under **History**, choose Firefox will: Use custom settings for history
-* Also under **History** (custom), uncheck everything and check only: Clear history when Firefox closes
-* Under **Permissions**, go to **Settings** for each item and check Block new requests... then **Save Changes**
-* Also under **Permissions**, check Block pop-up windows and Warn you when websites try to install add-ons
-* Under **Firefox Data Collection and Use**, uncheck everything
-* Under **Security/Deceptive Content**, check everything
-* Under **Security/Certificates**, check Query OCSP responder servers...
-* Under **Security/HTTPS-Only Mode**, check Enable HTTPS-Only Mode in all windows
-* Under **DNS over HTTPS**, check Max Protection, then **Choose provider**: NextDNS
+* Under **Enhanced Tracking Protection**, choose **Strict**
+* Under **Website Privacy Preferences**, check **both options**
+* Under **Cookies and Site Data**, check: **Delete cookies and site data when Firefox is closed**
+* Under **Passwords**, uncheck **everything**
+* Under **History**, choose Firefox will: **Use custom settings for history**
+* Also under **History** (custom), uncheck **everything** except: **Clear history when Firefox closes**
+* Under **Permissions**, go to **Settings...** for each item and check **Block new requests...** then **Save Changes**
+* Also under **Permissions**, check **Block pop-up windows** and **Warn you when websites try to install add-ons**
+* Under **Firefox Data Collection and Use**, uncheck **everything**
+* Under **Security/Deceptive Content**, check **everything**
+* Under **Security/Certificates**, check **Query OCSP responder servers...**
+* Under **Security/HTTPS-Only Mode**, check **Enable HTTPS-Only Mode in all windows**
+* Under **DNS over HTTPS**, check **Max Protection**, then **Choose provider**: **NextDNS**
 
 Now your Firefox is much more secure and should keep you safe from most nasty things out there.
 
@@ -176,8 +180,7 @@ On the first line, replace:
 
 with:
 
-    root:x:0:0:root:/root:
-    /sbin/nologin
+    root:x:0:0:root:/root:/sbin/nologin
 
 Save and close the file.
 
@@ -219,7 +222,11 @@ To disable all kinds of **data collection** that Ubuntu may perform, use the fol
 
     sudo apt remove popularity-contest
 
-Additionally, in your Ubuntu main menu go to **Settings -> Privacy & Security -> Diagnostics** and set **Send error reports to Canonical** to Never.
+Additionally, in your Ubuntu main menu go to **Settings -> Privacy & Security** and:
+- Go to **Screen Lock** and turn on **Automatic Screen Lock**.
+- Go to **Location** and disable **Automatic Device Location**.
+- Go to **File History & Trash** and disable **File History**, then enable **Automatically Detele Trash Content** and **Automatically Delete Temporary Files**, set period to **1 day**.
+- Go to **Diagnostics** and set **Send error reports to Canonical** to Never.
 
 * **Disabling the camera and microphone**
 
@@ -244,6 +251,8 @@ Now, in the same `/etc/modprobe.d/blacklist.conf` file where you blacklisted you
 `blacklist snd_hda_dsp`
 
 That's it. Save the file and close it.
+
+**Note!** The blacklisting changes will be applied after reboot.
 
 **Note!** Disabling the mic this way will also disable sounds on your **BASE** machine. If you ever need to listen to audio/video, you can remove the line from the file and then add it back again when you're done.
 
