@@ -176,7 +176,7 @@ Now, edit the **passwd** file using the command below.
 
 On the first line, replace:
 
-    root:x:0:0:root:/root:/bin/bashroot:x:0:0:root:/root:/bin/bash
+    root:x:0:0:root:/root:/bin/bash
 
 with:
 
@@ -198,7 +198,7 @@ This is going to clean up and simplify your working environment, and will also *
 
 * **Removing unnecessary apps**
 
-Since I assume you performed Task #1 already, you have chosen **Default Selection** during your fresh installation of Ubuntu. This already provided you with a clean and minimalistic OS. If you need to double-check for any useless apps, simply go to **Settings -> Apps** from your main menu and scroll through the list of installed apps. You probably don't need to remove anything if you followed the steps in Task #1.
+Since I assume you performed **Task #1** already, you have chosen **Default Selection** during your fresh installation of Ubuntu. This already provided you with a clean and minimalistic OS. If you need to double-check for any useless apps, simply go to **Settings -> Apps** from your main menu and scroll through the list of installed apps. You probably don't need to remove anything if you followed the steps in **Task #1**.
 
 * **Monitoring running services**
 
@@ -226,7 +226,7 @@ Additionally, in your Ubuntu main menu go to **Settings -> Privacy & Security** 
 - Go to **Screen Lock** and turn on **Automatic Screen Lock**.
 - Go to **Location** and disable **Automatic Device Location**.
 - Go to **File History & Trash** and disable **File History**, then enable **Automatically Detele Trash Content** and **Automatically Delete Temporary Files**, set period to **1 day**.
-- Go to **Diagnostics** and set **Send error reports to Canonical** to Never.
+- Go to **Diagnostics** and set **Send error reports to Canonical** to **Never**.
 
 * **Disabling the camera and microphone**
 
@@ -252,7 +252,7 @@ Now, in the same `/etc/modprobe.d/blacklist.conf` file where you blacklisted you
 
 That's it. Save the file and close it.
 
-**Note!** The blacklisting changes will be applied after reboot.
+**Note!** The blacklisting changes will be applied after **reboot**.
 
 **Note!** Disabling the mic this way will also disable sounds on your **BASE** machine. If you ever need to listen to audio/video, you can remove the line from the file and then add it back again when you're done.
 
