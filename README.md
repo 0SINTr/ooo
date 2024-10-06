@@ -15,6 +15,8 @@ A few **considerations** before diving in:
 * It's completely free, as in the required tools are free of charge and open-source.
 * I am in no way affiliated with any of the tools or services discussed below.
 
+**Important note:** The task list below is not exhaustive and more advanced tools and techniques can be employed, however I wanted this framework to be accessible to as many OSINT people as possible. Keep in mind that **journalists**, **private investigators** and **whistleblowers** can be OSINTers too, so not everyone is a cybersecurity or Linux wizard.
+
 ## 🎯 **OOO GOALS**
 
 Protecting your **identity**, reducing your **digital footprint** and **keeping you and your data safe** from malware and trackers while performing OSINT work.
