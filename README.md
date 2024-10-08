@@ -5,7 +5,7 @@
 [![Stable Release](https://img.shields.io/badge/version-1.1.0-blue.svg)](https://github.com/0SINTr/ooo/releases/tag/v1.1.0)
 [![Last Commit](https://img.shields.io/github/last-commit/0SINTr/ooo)](https://github.com/0SINTr/ooo/commits/main)
 
-Framework for maintaining proper **digital hygiene** whilst performing OSINT-related tasks and investigations.\
+Framework for maintaining proper **digital hygiene** whilst performing OSINT-related tasks and investigations.
 
 This approach is a highly curated **checklist** of actions that should enhance your own personal and digital security **prior** to starting any OSINT investigation online.
 
