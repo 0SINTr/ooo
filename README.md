@@ -68,6 +68,8 @@ Your firewall is now active. Check its **status** using:
 
 `sudo ufw status verbose`
 
+**NOTE:** Popular alternatives to **ufw** include [**firewalld**](https://firewalld.org/) and [**OpenSnitch**](https://github.com/evilsocket/opensnitch).
+
 ## 🛠️ Task #4
 
 Installing and using a **VPN** for protecting your Internet traffic. This **safeguards your traffic from your ISP** and also **masks your real public IP** when online.
