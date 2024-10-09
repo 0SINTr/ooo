@@ -2,7 +2,7 @@
 # OSINT OpSec Outline
 **OOO - Framework for OSINT hygiene**
 
-[![Stable Release](https://img.shields.io/badge/version-1.1.0-blue.svg)](https://github.com/0SINTr/ooo/releases/tag/v1.1.0)
+[![Stable Release](https://img.shields.io/badge/version-1.1.1-blue.svg)](https://github.com/0SINTr/ooo/releases/tag/v1.1.1)
 [![Last Commit](https://img.shields.io/github/last-commit/0SINTr/ooo)](https://github.com/0SINTr/ooo/commits/main)
 
 Framework for maintaining proper **digital hygiene** whilst performing OSINT-related tasks and investigations.
@@ -143,9 +143,11 @@ Now your Firefox is much more secure and should keep you safe from most nasty th
 
 ## 🛠️ Task #7
 
-After configuring your Firefox, you can add an extra guardian that will further protect your browsing experience, and that is the **uBlock Origin** add-on which is going to automatically block ads, pop-ups and trackers by default.
+After configuring your Firefox, you can add an extra guardian that will further protect your browsing experience, and that is the **uBlock Origin** add-on which is going to automatically block most ads, pop-ups and trackers by default.
 
 To install this add-on, in Firefox type this in the search bar: `about:addons`, then search for **uBlock Origin** and add it to your browser. By default, it will block a lot of nasty or annoying things, so unless you need to enable more advanced settings or filters/lists, you can just leave it as it is and move on.
+
+However, if you **do** want to get the best balance between privacy and usability, you should check out **uBlock Origin's medium mode** described on their [official Wiki page](https://github.com/gorhill/ublock/wiki/Blocking-mode:-medium-mode). Keep in mind though that it will break some websites partially and will require your intervention to un-break them.
 
 ## 🛠️ Task #8
 
@@ -271,6 +273,7 @@ That's it. Save the file and close it.
 * If you need secure storage to store files, use [ProtonDrive](https://proton.me/drive/download) (free version) which provides you with 5GB of encrypted storage.
 * If you need email, go with [ProtonMail](https://proton.me/mail/download) (free) for one email address and 1GB storage space.
 * **You don't really need an antivirus**. Linux viruses are quite rare and for this reason it's not worth having a 3rd party app sniffing everything you do.
+* Optionally, you may want to install [**BleachBit**](https://www.bleachbit.org/download/linux) to regularly perform thorough cleanups of your **BASE** machine.
 * As an additional precaution, **cover your camera with black tape**. Best webcam protection ever.
 
 ## 🔍 What about the VMs?
@@ -290,6 +293,15 @@ So, **before starting any OSINT-related work**:
 * Use the VM's storage space or a new ProtonDrive for your work on the VM.
 * Keep in mind that the VM (OS, email, storage) must not interfere with **BASE**.
 * Once your OSINT work is done, save your data if needed and **destroy the VM**.
+
+## ✅ Checking your connection
+
+Before starting any OSINT task, make sure to always **check if your VPN is running properly** and if there are any leaks that can be detected from your browser activity. The **browser fingerprinting** performed by the websites you visit gets more advanced every year and, even though Firefox add-ons such as [**CanvasBlocker**](https://addons.mozilla.org/en-US/firefox/addon/canvasblocker/), [**User-Agent Switcher**](https://addons.mozilla.org/en-US/firefox/addon/uaswitcher/) or [**User-Agent Switcher and Manager**](https://addons.mozilla.org/en-US/firefox/addon/user-agent-string-switcher/) exist, they don't provide total protection **and** may even contribute to making your browser fingerprint even more unique and easy to isolate.
+
+**You can check both your VPN connection and the data that your browser leaks using websites such as:**
+* [WhatIsMyIPAddress.com](https://whatismyipaddress.com/)
+* [IPLeak.net](https://ipleak.net/)
+* [BrowserLeaks.com](https://browserleaks.com/)
 
 ## ⚠️ Final considerations
 
