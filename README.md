@@ -263,7 +263,7 @@ That's it. Save the file and close it.
 
 **Note!** Disabling the mic this way will also disable sounds on your **BASE** machine. If you ever need to listen to audio/video, you can remove the line from the file and then add it back again when you're done.
 
-## 🛠️ Additional tasks
+## 🛠️ Additional Tasks
 
 * Keep your Ubuntu up to date, regularly check for updates via **Settings -> System -> Software Updates**.
 * **Do not ever login to any of your personal accounts** (email, social media, websites) on your **BASE** machine.
@@ -276,7 +276,7 @@ That's it. Save the file and close it.
 * Optionally, you may want to install [**BleachBit**](https://www.bleachbit.org/download/linux) to regularly perform thorough cleanups of your **BASE** machine.
 * As an additional precaution, **cover your camera with black tape**. Best webcam protection ever.
 
-## 🔍 What about the VMs?
+## 🔍 What About The VMs?
 
 Ok, so we covered the **BASE** machine which should be kept clean and secure at all times. 
 
@@ -294,22 +294,22 @@ So, **before starting any OSINT-related work**:
 * Keep in mind that the VM (OS, email, storage) must not interfere with **BASE**.
 * Once your OSINT work is done, save your data if needed and **destroy the VM**.
 
-## ✅ Checking your connection
+## ✅ Checking Your Connection
 
 Before starting any OSINT task, make sure to always **check if your VPN is running properly** and if there are any leaks that can be detected from your browser activity. The **browser fingerprinting** performed by the websites you visit gets more advanced every year and, even though Firefox add-ons such as [**CanvasBlocker**](https://addons.mozilla.org/en-US/firefox/addon/canvasblocker/), [**User-Agent Switcher**](https://addons.mozilla.org/en-US/firefox/addon/uaswitcher/) or [**User-Agent Switcher and Manager**](https://addons.mozilla.org/en-US/firefox/addon/user-agent-string-switcher/) exist, they don't provide total protection **and** may even contribute to making your browser fingerprint even more unique and easy to isolate.
 
 **You can check both your VPN connection and the data that your browser leaks using websites such as:**
 * [WhatIsMyIPAddress.com](https://whatismyipaddress.com/)
-* [IPLeak.net](https://ipleak.net/)
 * [BrowserLeaks.com](https://browserleaks.com/)
+* [IPLeak.net](https://ipleak.net/)
 
-## ⚠️ Final considerations
+## ⚠️ Final Considerations
 
 * I didn't mention **Tor**. In short, Tor might be blocked by various online services, and unless you need it for a specific task (e.g. browsing the dark web) I would prefer the hardened setup discussed above.
 * I didn't mention **Tails**, which is an amnesic OS that you can run from a bootable USB drive with or without persistent storage. It may be a great choice for OSINT, but it comes with some limitations.
 * I didn't mention **Qubes** or **Whonix**, which are highly-secured OSs aimed at more advanced users. Instead, I wanted to build a framework that almost anyone with some tech skills can implement.
 
-## 🔄 OOO Framework updates
+## 🔄 OOO Framework Updates
 
 As they say, this is a living document. As various services and tools evolve, the framework will change accordingly. Also, if I decide to add or remove tasks or recommendations I will do so at my own discretion.
 
