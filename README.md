@@ -318,3 +318,15 @@ As they say, this is a living document. As various services and tools evolve, th
 * All the information in this framework is intended to **protect yourself, your devices, your data and your OSINT work** from the ever-changing landscape of online threats. 
 * In the context of this framework, **OSINT refers to passive, non-intrusive open-source intelligence** tasks.
 * Any illegal or unethical use of this information is **your** responsibility.
+* 
+## 📧 Contact for Professional Collaborations
+
+- **Email Address**:  
+  Please direct your inquiries to **sintr.0@pm.me**.
+
+- **Important Guidelines**:  
+  - Use a **professional email** or a **ProtonMail** address.
+  - Keep your message **concise** and written in **English**.
+
+- **Security Notice**:  
+  Emails with **links** or **attachments** will be ignored for security reasons.
