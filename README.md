@@ -319,7 +319,7 @@ As they say, this is a living document. As various services and tools evolve, th
 * In the context of this framework, **OSINT refers to passive, non-intrusive open-source intelligence** tasks.
 * Any illegal or unethical use of this information is **your** responsibility.
 * 
-## 📧 Contact for Professional Collaborations
+## 📧 Professional Collaborations
 
 - **Email Address**:  
   Please direct your inquiries to **sintr.0@pm.me**.
