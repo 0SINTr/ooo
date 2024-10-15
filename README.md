@@ -318,7 +318,7 @@ As they say, this is a living document. As various services and tools evolve, th
 * All the information in this framework is intended to **protect yourself, your devices, your data and your OSINT work** from the ever-changing landscape of online threats. 
 * In the context of this framework, **OSINT refers to passive, non-intrusive open-source intelligence** tasks.
 * Any illegal or unethical use of this information is **your** responsibility.
-* 
+
 ## 📧 Professional Collaborations
 
 - **Email Address**:  
