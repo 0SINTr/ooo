@@ -139,7 +139,17 @@ Next, it's time to make our **Firefox** more secure. Go to **Settings**.
 * Under **Security/HTTPS-Only Mode**, check **Enable HTTPS-Only Mode in all windows**
 * Under **DNS over HTTPS**, check **Max Protection**, then **Choose provider**: **NextDNS**
 
-Now your Firefox is much more secure and should keep you safe from most nasty things out there.
+Next, let's enable **containers** so you can easily **compartmentalize your browser activities** and keep different aspects of your OSINT work under different containers (more details [**here**](https://support.mozilla.org/ro/kb/how-use-firefox-containers)).
+* In the search bar type in `about:config` 
+* Then click on **Accept the Risk and Continue**
+* In the new window, search for **userContext**
+* Set **privacy.userContext.enabled** to **true**
+* Set **privacy.userContext.ui.enabled** to **true**
+* Set **privacy.userContext.newTabContainerOnLeftClick.enabled** to **true**
+* Go to **Firefox Settings/General/Enable Container Tabs/Settings** to create, edit or remove containers
+* Now when you click **+** to open a new tab you'll be asked to choose a container
+  
+At this point, your Firefox is much more secure and should keep you safe from most nasty things out there.
 
 ## 🛠️ Task #7
 
