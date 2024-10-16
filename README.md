@@ -149,7 +149,7 @@ Next, let's enable **containers** so you can easily **compartmentalize your brow
 * Go to **Firefox Settings/General/Enable Container Tabs/Settings** to create, edit or remove containers
 * Now when you click **+** to open a new tab you'll be asked to choose a container
   
-At this point, your Firefox is much more secure and should keep you safe from most nasty things out there.
+At this point, your Firefox is much cleaner and more secure, and should keep you safe from most (common) nasty things out there.
 
 ## 🛠️ Task #7
 
